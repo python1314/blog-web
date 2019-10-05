@@ -10,16 +10,6 @@
 				<i class="fa fa-weibo"></i>
 			</div>
 		</a>
-		<a href="javascript:;" class="share-plain facebook style-plain" onclick="share('facebook');" rel="nofollow">
-			<div class="icon-wrap">
-				<i class="fa fa-facebook"></i>
-			</div>
-		</a>
-		<a href="javascript:;" class="share-plain googleplus style-plain" onclick="share('googleplus');" rel="nofollow">
-			<div class="icon-wrap">
-				<i class="fa fa-google-plus"></i>
-			</div>
-		</a>
 		<a href="javascript:;" class="share-plain weixin pop style-plain" rel="nofollow">
 			<div class="icon-wrap">
 				<i class="fa fa-weixin"></i>

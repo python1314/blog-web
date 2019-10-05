@@ -16,7 +16,7 @@
 		<meta name="format-detection" content="telphone=no, email=no">
 		<meta name="description" content="<?php kratos_description(); ?>" />
 		<meta name="keywords" content="<?php kratos_keywords();?>" />
-		<link rel="icon" href="favicon.ico" type="image/x-icon" />
+		<link rel="icon" href="/favicon.ico" type="image/x-icon" />
 		<meta itemprop="image" content="<?php echo kratos_thumbnail_url(); ?>"/>
 		<meta name="description" itemprop="description" content="<?php kratos_description(); ?>" />
 		<?php wp_head(); ?>
