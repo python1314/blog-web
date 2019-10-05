@@ -28,9 +28,8 @@ get_header('banner'); ?>
 							<div class="kratos-post-meta text-center">
 								<span>
 								<i class="fa fa-calendar"></i> <?php echo get_the_date(); ?>
-				                <i class="fa fa-commenting-o"></i> <?php comments_number('0', '1', '%'); ?>条评论
 				                <i class="fa fa-eye"></i> <?php echo kratos_get_post_views();?>次阅读
-				                <i class="fa fa-thumbs-o-up"></i> <?php if( get_post_meta($post->ID,'love',true) ){ echo get_post_meta($post->ID,'love',true); } else { echo '0'; }?>人点赞
+				                <i class="fa fa-user-circle"></i> <?php the_author(); ?>
 								</span>
 							</div>
 						</header>
@@ -39,6 +38,10 @@ get_header('banner'); ?>
 							<a href="<?php echo kratos_option('ad_link_1'); ?>"><img src="<?php echo kratos_option('ad_img_1')?>"></a>
 	                    <?php endif ?>
                         <?php the_content(); ?>
+                        <p><hr></p>
+                        <?php if ( in_category("python-daily") ): ?>
+                          <p>每天，我们会从大量信息源中为你精心挑选有价值阅读的技术文章，中英文都会有 – 都是有关编程总结、技术趋势、开发技巧等主题的文章。点击“派学日记”去阅读今天最新的日报吧！</p>
+                        <?php endif ?>
 						<?php if ( kratos_option('ad_show_2') ): ?>
 							<a href="<?php echo kratos_option('ad_link_2'); ?>"><img src="<?php echo kratos_option('ad_img_2')?>"></a>
 	                    <?php endif ?>
