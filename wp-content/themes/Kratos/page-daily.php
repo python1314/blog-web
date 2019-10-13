@@ -16,7 +16,7 @@ get_header('banner'); ?>
 	                </div>
 	            </aside>
 			<?php } ?>
-      <section id="main" class='<?php echo ($page_side_bar == 'single') ? 'col-md-12' : 'col-md-8'; ?>'>
+            <section id="main" class='<?php echo ($page_side_bar == 'single') ? 'col-md-12' : 'col-md-8'; ?>'>
 				<article>
 					<div class="kratos-hentry kratos-post-inner clearfix">
           <header class="kratos-entry-header">
@@ -50,6 +50,7 @@ get_header('banner'); ?>
                 <p style="margin-bottom:5px"><?php if ( get_the_tags() ) { the_tags('标签：', ' ', ''); }?></p>
                 <p style="margin-bottom:25px">简介：<?php echo wp_trim_words(get_the_excerpt(), 68); ?><a target="_blank" href="<?php $reg="/href=\"([^\"]+)/";preg_match($reg, get_the_content(), $a); echo substr($a[0], 6); ?>">原文链接</a></p>
               <?php  endwhile; endif; wp_reset_query(); ?>
+              <p class="text-center"><a class="more" target="_blank" href="/learn/daily" style="border: 1px solid #ef7042; padding: 4px 12px;"><i class="fa fa-random" style="font-size: 12px; margin-right: 4px;"></i>往期更多</a></p>
               <p><hr></p>
               <?php if ( kratos_option('ad_show_2') ): ?>
                 <a href="<?php echo kratos_option('ad_link_2'); ?>"><img src="<?php echo kratos_option('ad_img_2')?>"></a>
