@@ -351,6 +351,60 @@ table,table tbody tr th {
 	padding: 3em 0
 }
 
+#kratos-blog-toolbox {
+	padding: 2em 0 2em;
+}
+
+#kratos-blog-toolbox .module {
+	background-color: #ffffff;
+}
+
+#kratos-blog-toolbox .module h4 {
+	padding: 15px 0;
+	border-bottom: 1px solid #cfcfcf;
+	margin-bottom: 15px;
+}
+
+#kratos-blog-toolbox .module h4 .more {
+	float: right;
+}
+
+#kratos-blog-toolbox .module ul {
+	padding: 0;
+	list-style: none;
+}
+
+#kratos-blog-toolbox .module.module-blog ul {
+	list-style: disc;
+	list-style-position: inside;
+}
+
+#kratos-blog-toolbox .module.module-blog li {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	line-height: 2.5;
+}
+
+#kratos-blog-toolbox .module a {
+	color: #333;
+}
+
+#kratos-blog-toolbox .module.module-tool li {
+	text-align: center;
+	height: 125px;
+}
+
+#kratos-blog-toolbox .module.module-tool li img {
+	width: 60%;
+	height: auto;
+}
+
+#kratos-blog-toolbox .module.module-tool li span {
+	padding: 10px 0;
+	display: block;
+}
+
 @media screen and (max-width:768px) {
 	#kratos-blog,#kratos-host,#kratos-photos,#kratos-projects {
 		padding: 4em 0 3em
