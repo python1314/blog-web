@@ -33,10 +33,10 @@ $listlayout = (empty($listlayout)) ? 'new_layout' : $listlayout; ?>
 </div>
 <?php } if($listlayout == 'new_layout'){ ?>
 <div class="kratos-entry-border-new clearfix">
-	<div class="kratos-entry-thumb-new">
+	<div class="kratos-entry-thumb-new" style="display:none;">
 		<?php kratos_blog_thumbnail_new() ?>
 	</div>
-	<div class="kratos-post-inner-new">
+	<div class="kratos-post-inner-new" style="padding-left:20px;margin-left:0;">
 		<header class="kratos-entry-header-new">
 			<a class="label" href="<?php $category = get_the_category();echo get_category_link($category[0] -> term_id) . '">' . $category[0] -> cat_name ; ?><i class="label-arrow"></i></a>
 			<h2 class="kratos-entry-title-new"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
@@ -53,7 +53,7 @@ $listlayout = (empty($listlayout)) ? 'new_layout' : $listlayout; ?>
 			<a href="<?php the_permalink() ?>"><i class="fa fa-eye"></i> <?php echo kratos_get_post_views(); ?>次阅读</a>
 		</span>
 		<span class="pull-left">
-            <i class="fa fa-user-circle"></i> <?php the_author(); ?>
+            <a href="https://www.python1314.com/author/<?php echo the_author_meta( 'user_login'); ?>" target="_blank"><i class="fa fa-user-circle"></i> <?php the_author(); ?></a>
         </span>
 		<span class="pull-right">
 			<a class="read-more" href="<?php the_permalink() ?>" title="查看详情">查看详情 <i class="fa fa-chevron-circle-right"></i></a>

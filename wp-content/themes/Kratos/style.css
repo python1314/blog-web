@@ -327,6 +327,10 @@ table,table tbody tr th {
 	padding: 2em 0 2em
 }
 
+#kratos-blog-post img{
+	max-width:100%;
+}
+
 #kratos-blog-post p .aligncenter {
 	display: block;
 	margin-left: auto;
@@ -2111,7 +2115,7 @@ a.list-group-item:focus,a.list-group-item:hover,button.list-group-item:focus,but
 	margin: 10px 10px
 }
 
-.kratos-post-content a{
+.kratos-post-content p a{
 	color: #ef7042
 }
 
@@ -2702,7 +2706,7 @@ img.size-smiley {
 	.kratos-post-inner-new {
 		margin-left: 0;
 		height: auto;
-		padding: 0 20px
+		padding: 10px 20px;
 	}
 
 	.kratos-post-meta-new .read-more {

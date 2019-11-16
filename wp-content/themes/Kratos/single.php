@@ -38,13 +38,34 @@ get_header('banner'); ?>
 							<a href="<?php echo kratos_option('ad_link_1'); ?>"><img src="<?php echo kratos_option('ad_img_1')?>"></a>
 	                    <?php endif ?>
                         <?php the_content(); ?>
+                        <div class="footer-tag clearfix">
+                            <div class="pull-left">
+                            <i class="fa fa-tags"></i>
+                            <?php if ( get_the_tags() ) { the_tags('', ' ', ''); } else{ echo '<a>No Tag</a>';  }?>
+                            </div>
+                        </div>
                         <p><hr></p>
-                        <?php if ( in_category("python-daily") ): ?>
-                          <p>每天，我们会从大量信息源中为你精心挑选有价值阅读的技术文章，中英文都会有 – 都是有关编程总结、技术趋势、开发技巧等主题的文章。点击“派学日记”去阅读今天最新的日报吧！</p>
-                        <?php endif ?>
-						<?php if ( kratos_option('ad_show_2') ): ?>
-							<a href="<?php echo kratos_option('ad_link_2'); ?>"><img src="<?php echo kratos_option('ad_img_2')?>"></a>
-	                    <?php endif ?>
+                        <div class="kratos-article-recommand">
+                            <h4 class="widget-title" style="margin-bottom: 10px;">同类推荐</h4>
+                            <?php
+                                global $post;
+                                $categories = get_the_category();
+                                foreach ($categories as $category){
+                            ?>
+                            <ul style="padding-left:20px;">
+                                <?php
+                                    $posts = get_posts('numberposts=10&orderby=rand&category='. $category->term_id);
+                                    foreach($posts as $post){
+                                ?>
+                                    <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+                                <?php
+                                    }
+                                ?>
+                            </ul>
+                            <?php
+                                }
+                            ?>
+                        </div>
 						</div>
 						<footer class="kratos-entry-footer clearfix">
 							<div class="post-like-donate text-center clearfix" id="post-like-donate">
@@ -57,12 +78,10 @@ get_header('banner'); ?>
 								<?php require_once( get_template_directory() . '/inc/share.php'); ?>
 							<?php endif; ?>
 				    		</div>
-							<div class="footer-tag clearfix">
-								<div class="pull-left">
-								<i class="fa fa-tags"></i>
-								<?php if ( get_the_tags() ) { the_tags('', ' ', ''); } else{ echo '<a>No Tag</a>';  }?>
-								</div>
-							</div>
+				    		<p><hr></p>
+                            <?php if ( kratos_option('ad_show_2') ): ?>
+                                <a href="<?php echo kratos_option('ad_link_2'); ?>"><img src="<?php echo kratos_option('ad_img_2')?>"></a>
+                            <?php endif ?>
 						</footer>
 					</div>
 					<?php if ( kratos_option( 'post_cc' )==1 ) : ?>
